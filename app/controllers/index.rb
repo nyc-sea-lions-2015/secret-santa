@@ -32,3 +32,9 @@ post '/auth/signup' do
     # @error = ''
   end
 end
+
+delete '/auth/logout' do
+  session[:user_id] = nil
+  @error = 'You have successfully logged out.'
+  redirect '/auth/login'
+end
