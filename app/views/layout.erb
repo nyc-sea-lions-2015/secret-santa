@@ -21,7 +21,13 @@
   <header>
     <h2><a href="/">secret santa</a></h2>
     <img src="#" alt="jolly st. nick">
+    <% if @user %>
+      <a href="/auth/logout">Logout</a>
+    <% end %>
   </header>
+  <% if @user %>
+    <a href="/users/<%= @user.id %>">Go Home <%= @user.first_name %></a>
+  <% end %>
   <%= yield %>
 </body>
 </html>
