@@ -19,3 +19,13 @@ end
 get '/auth/signup' do
   erb :'index/signup'
 end
+
+post '/auth/signup' do
+  @user = User.new(params)
+
+  if @user.save
+    redirect "/users/<%= @user.id %>"
+  else
+    redirect '/auth/signup?error=noauth'
+  end
+end
