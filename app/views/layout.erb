@@ -22,7 +22,10 @@
     <h2><a href="/">secret santa</a></h2>
     <img src="#" alt="jolly st. nick">
     <% if @user %>
-      <a href="/auth/logout">Logout</a>
+      <form action="/auth/logout" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <button type="submit">Logout</button>
+      </form>
     <% end %>
   </header>
   <% if @user %>

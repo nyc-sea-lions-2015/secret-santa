@@ -10,10 +10,11 @@ put '/auth/login' do
   user = User.find_by(email: params[:email])
 
   if user.try(:authenticate, params[:password])
+    session[:user_id] = user.id
     redirect "/users/#{user.id}"
   else
+    @error = 'Invalid email or password.'
     redirect '/auth/login?error=noauth'
-    # @error = ''
   end
 end
 
@@ -28,8 +29,8 @@ post '/auth/signup' do
     session[:user_id] = @user.id
     redirect "/users/<%= @user.id %>"
   else
+    @error = 'Error signing up. Please try again.'
     redirect '/auth/signup?error=noauth'
-    # @error = ''
   end
 end
 
