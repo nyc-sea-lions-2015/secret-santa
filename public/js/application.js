@@ -4,4 +4,17 @@ $(document).ready(function() {
   // when we try to bind to them
 
   // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+
+  $('#drawName').on('submit', function(event) {
+    event.preventDefault;
+    $(this).toggle();
+
+    $.ajax({
+      url: '/users/draw',
+      method: 'get',
+      dataType: 'html'
+    }).done(function(response) {
+      $('#drawResult').a
+    })
+  });
 });

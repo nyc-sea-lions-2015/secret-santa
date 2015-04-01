@@ -9,7 +9,7 @@
       <li><%= user.last_name ? "#{user.first_name} #{user.last_name}" : user.first_name %></li>
     <% end %>
   </ul>
-  <form action='/assignments' method='get'>
+  <form action='/users/draw' method='get'>
     <input type="hidden" name="group_id" value="<%= @group.id %>">
     <button id="drawName" type="submit">Draw Name</button>
   </form>
