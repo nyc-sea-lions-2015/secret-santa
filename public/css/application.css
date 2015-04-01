@@ -1,0 +1,22 @@
+body {
+  background: #0c6;
+}
+header {
+  width: 100%;
+  background: #c00;
+  height: 40%;
+}
+
+button {
+  width: 30%;
+  height: 30%;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 a {
+  font-size: 45px;
+  color: white;
+}
