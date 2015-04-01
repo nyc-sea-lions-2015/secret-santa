@@ -25,6 +25,7 @@ post '/auth/signup' do
   @user = User.new(params)
 
   if @user.save
+    session[:user_id] = @user.id
     redirect "/users/<%= @user.id %>"
   else
     redirect '/auth/signup?error=noauth'

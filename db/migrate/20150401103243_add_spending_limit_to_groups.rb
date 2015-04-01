@@ -1,5 +1,5 @@
 class AddSpendingLimitToGroups < ActiveRecord::Migration
   def change
-    add_column :groups, :spending_limit, :decimal, precision: 6, scale: 2, null: false
+    add_column :groups, :spending_limit, :integer, null: false
   end
 end

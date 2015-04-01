@@ -1,0 +1,12 @@
+<div>
+  <h2><%= @group.name %></h2>
+  <% @creator.last_name ? name = "#{@creator.first_name} #{@creator.last_name}" : name = "#{@creator.first_name}" %>
+  <h3>Creator: <%= name %></h3>
+  <h3>Spending Limit: $<%= @group.spending_limit %></h3>
+  <h3>Members</h3>
+  <ul>
+    <% @group.users.each do |user| %>
+      <li><%= user.last_name ? "#{user.first_name} #{user.last_name}" : user.first_name %></li>
+    <% end %>
+  </ul>
+</div>
