@@ -15,3 +15,7 @@ put '/auth/login' do
     redirect '/auth/login?error=noauth'
   end
 end
+
+get '/auth/signup' do
+  erb :'index/signup'
+end
