@@ -4,4 +4,8 @@ class Group < ActiveRecord::Base
   belongs_to :creator, class_name: 'User'
 
   validates :name, :creator_id, :spending_limit, presence: true
+
+  def draw_names(name_list)
+
+  end
 end
