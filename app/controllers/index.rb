@@ -13,6 +13,7 @@ put '/auth/login' do
     redirect "/users/#{user.id}"
   else
     redirect '/auth/login?error=noauth'
+    # @error = ''
   end
 end
 
@@ -27,5 +28,6 @@ post '/auth/signup' do
     redirect "/users/<%= @user.id %>"
   else
     redirect '/auth/signup?error=noauth'
+    # @error = ''
   end
 end
