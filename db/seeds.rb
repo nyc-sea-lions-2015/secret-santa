@@ -5,9 +5,9 @@ user4 = User.create!(first_name: 'Nora', email: 'nora@gmail.com', password: '123
 user5 = User.create!(first_name: 'Tom', email: 'tom@gmail.com', password: '1234')
 user6 = User.create!(first_name: 'Mike', email: 'mike@gmail.com', password: '1234')
 
-group1 = Group.create!(name: 'Sea Lions', creator: user1, spending_limit: 25.00)
-group2 = Group.create!(name: 'Jackals', creator: user4, spending_limit: 35.00)
-group3 = Group.create!(name: 'Phase Up', creator: user3, spending_limit: 100.00)
+group1 = Group.create!(name: 'Sea Lions', creator: user1, spending_limit: 25.00, users: [user1, user2, user3])
+group2 = Group.create!(name: 'Jackals', creator: user4, spending_limit: 35.00, users: [user4, user5, user6])
+group3 = Group.create!(name: 'Phase Up', creator: user3, spending_limit: 100.00, users: [user1, user2, user3, user4, user5, user6])
 
 like1 = Like.create!(user: user1, content: 'Longboarding')
 like2 = Like.create!(user: user1, content: 'NY Knicks')
