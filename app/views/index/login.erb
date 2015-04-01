@@ -1,8 +1,4 @@
 <div>
-  <% if @error %>
-    <p><%= @error %></p>
-  <% end %>
-
   <form action="/auth/login" method="post">
     <input type="hidden" name="_method" value="put">
     <label for="email">Email: </label>
