@@ -1,0 +1,10 @@
+<div id="drawResult">
+  <p>You picked <span><%= @receiver.last_name ? "#{@receiver.first_name} #{@receiver.last_name}" : @receiver.first_name %></span>.</p>
+  <p><%= @receiver.first_name %> likes:</p>
+  <ul>
+    <% @receiver_likes.each do |like| %>
+      <li><%= like.content %></li>
+    <% end %>
+  </ul>
+  <p>Shhhh! Remember, this is our little secret.</p>
+</div>
