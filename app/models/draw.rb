@@ -4,7 +4,7 @@ class Draw
     @list = list
   end
 
-  def draw_names
+  def shuffle_list
     givers = list.shuffle
     receivers = givers
     last = receivers.shift
