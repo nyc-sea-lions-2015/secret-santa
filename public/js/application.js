@@ -18,3 +18,12 @@ $(document).ready(function() {
     })
   });
 });
+
+
+/*
+
+So this is incomplete, but is going the right direction.  I think with a bit more
+time you would have sussed this out.
+
+
+ */

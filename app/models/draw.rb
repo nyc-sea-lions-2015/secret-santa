@@ -5,6 +5,8 @@ class Draw
   end
 
   def shuffle_list
+    # This looks like it works... but its confusing...
+    # Theres definitely a better way to do this... :/
     givers = list.shuffle
     receivers = givers
     last = receivers.shift

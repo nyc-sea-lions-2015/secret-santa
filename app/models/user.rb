@@ -7,4 +7,8 @@ class User < ActiveRecord::Base
 
   validates :email, :first_name, :password_digest, presence: true
   validates :email, uniqueness: true
+
+  def display_name
+    last_name ? "#{first_name} #{last_name}" : first_name
+  end
 end

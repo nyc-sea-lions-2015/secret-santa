@@ -1,18 +1,17 @@
 <div>
   <h2>Account Info</h2>
-  <% @user.last_name ? name = "#{@user.first_name} #{@user.last_name}" : name = @user.first_name %>
-  <h3><%= name %></h3>
-  <h3><%= @user.email %></h3>
+  <h3><%= current_user.display_name %></h3>
+  <h3><%= current_user.email %></h3>
   <h3>Likes</h3>
   <ul>
-    <% @likes.each do |like| %>
+    <% @user.likes.each do |like| %>
       <li><%= like.content %></li>
     <% end %>
   </ul>
   <hr>
   <h3>Groups</h3>
   <ul>
-    <% @groups.each do |group| %>
+    <% @user.groups.each do |group| %>
       <li><a href="/groups/<%= group.id %>"><%= group.name %></a></li>
     <% end %>
   </ul>
